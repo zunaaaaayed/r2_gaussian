@@ -35,3 +35,34 @@ The earlier supplied-data reproduction is a separate experiment.
 
 Generated-data hashes and provenance are stored within each data directory.
 Small floating-point differences across hardware/software may remain.
+
+## TIGRE v2.3 compatibility fix
+
+The original cone-beam FDK backprojector calls cudaDeviceReset().
+In the initializer, this conflicts with the surrounding PyTorch GPU context:
+initialization was saved, but the process subsequently segfaulted.
+
+The tracked patch removes this reset:
+tigre-v2.3-preserve-cuda-context.patch
+
+After rebuilding TIGRE:
+- Initializer exit code: 0.
+- Output exactly identical to the pre-patch saved initialization.
+- Maximum absolute difference: 0.0.
+
+To reproduce on a clean TIGRE v2.3 checkout, from the R2-Gaussian root:
+
+    git -C "$HOME/espaces/travail/trdp2/tools/TIGRE-v2.3" apply \
+      "$PWD/experiments/limited_angle_120/tigre-v2.3-preserve-cuda-context.patch"
+
+Then rebuild TIGRE using the working CUDA 11.8/GCC 11 environment:
+
+    (
+      export NVCC_PREPEND_FLAGS="-ccbin=$CXX"
+      python -m pip install --no-build-isolation --no-cache-dir \
+        --force-reinstall --no-deps \
+        "$HOME/espaces/travail/trdp2/tools/TIGRE-v2.3/Python"
+    )
+
+Apply the patch once. The TIGRE commit alone does not capture this local fix;
+retain the patch alongside the environment records.
