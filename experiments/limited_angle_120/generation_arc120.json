@@ -1,0 +1,15 @@
+{
+  "git_commit": "72f6be0f9bc0ba59968842332b5a864234d033bd",
+  "generator_sha256": "c60d7fbafe7aff80a80a7429cfebbe72753e2336f608ec4005a50384a1cf007c",
+  "source_volume_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+  "source_metadata_sha256": "011030f5943a1658890d8a28a977a08cb4e3c6f810294fa7926387b068ad0192",
+  "noise": false,
+  "n_train": 50,
+  "n_test": 100,
+  "start_degrees": 0.0,
+  "arc_degrees": 120,
+  "endpoint_included": false,
+  "last_training_angle_degrees": 117.6,
+  "evaluation": "Shared full-circle midpoint grid; evaluation only",
+  "initialization": "Not copied; must be generated per case"
+}

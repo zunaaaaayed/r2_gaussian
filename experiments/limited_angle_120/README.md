@@ -66,3 +66,13 @@ Then rebuild TIGRE using the working CUDA 11.8/GCC 11 environment:
 
 Apply the patch once. The TIGRE commit alone does not capture this local fix;
 retain the patch alongside the environment records.
+
+## Interrupted execution
+
+The first 120-degree run was interrupted during an SSH disconnection.
+Its log ended at approximately iteration 8,120, before the first scheduled
+checkpoint at 10,000. No resumable checkpoint was found.
+
+The incomplete output and log were archived locally. The replacement run
+starts from the same initialization with unchanged reconstruction settings.
+Checkpoint saving was increased to every 5,000 iterations for recovery.

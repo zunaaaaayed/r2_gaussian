@@ -1,0 +1,9 @@
+{
+  "comparison": "120-degree acquisition minus 360-degree control",
+  "training_views_per_case": 50,
+  "added_measurement_noise": false,
+  "final_iteration": 30000,
+  "psnr_difference_db": -4.640174865722656,
+  "ssim_difference": -0.04097872972488403,
+  "scope": "One chest volume, one completed run per geometry"
+}
