@@ -1,0 +1,664 @@
+{
+    "scanner": {
+        "mode": "cone",
+        "filter": null,
+        "DSD": 7.0,
+        "DSO": 5.0,
+        "nDetector": [
+            512,
+            512
+        ],
+        "sDetector": [
+            4.0,
+            4.0
+        ],
+        "nVoxel": [
+            256,
+            256,
+            256
+        ],
+        "sVoxel": [
+            2.0,
+            2.0,
+            2.0
+        ],
+        "offOrigin": [
+            0,
+            0,
+            0
+        ],
+        "offDetector": [
+            0,
+            0
+        ],
+        "accuracy": 0.5,
+        "totalAngle": 360.0,
+        "startAngle": 0.0,
+        "noise": true
+    },
+    "bbox": [
+        [
+            -1,
+            -1,
+            -1
+        ],
+        [
+            1,
+            1,
+            1
+        ]
+    ],
+    "init": {
+        "init_type": "basic",
+        "recon_method": "fdk",
+        "n_points": 50000,
+        "density_thresh": 0.05,
+        "grad_thresh": 1.0,
+        "density_rescale": 0.15
+    },
+    "proj_train": [
+        {
+            "file_path": "proj_train/proj_train_0000.npy",
+            "angle": 0.0
+        },
+        {
+            "file_path": "proj_train/proj_train_0001.npy",
+            "angle": 0.12566370614359174
+        },
+        {
+            "file_path": "proj_train/proj_train_0002.npy",
+            "angle": 0.25132741228718347
+        },
+        {
+            "file_path": "proj_train/proj_train_0003.npy",
+            "angle": 0.3769911184307752
+        },
+        {
+            "file_path": "proj_train/proj_train_0004.npy",
+            "angle": 0.5026548245743669
+        },
+        {
+            "file_path": "proj_train/proj_train_0005.npy",
+            "angle": 0.6283185307179586
+        },
+        {
+            "file_path": "proj_train/proj_train_0006.npy",
+            "angle": 0.7539822368615504
+        },
+        {
+            "file_path": "proj_train/proj_train_0007.npy",
+            "angle": 0.8796459430051422
+        },
+        {
+            "file_path": "proj_train/proj_train_0008.npy",
+            "angle": 1.0053096491487339
+        },
+        {
+            "file_path": "proj_train/proj_train_0009.npy",
+            "angle": 1.1309733552923256
+        },
+        {
+            "file_path": "proj_train/proj_train_0010.npy",
+            "angle": 1.2566370614359172
+        },
+        {
+            "file_path": "proj_train/proj_train_0011.npy",
+            "angle": 1.3823007675795091
+        },
+        {
+            "file_path": "proj_train/proj_train_0012.npy",
+            "angle": 1.5079644737231008
+        },
+        {
+            "file_path": "proj_train/proj_train_0013.npy",
+            "angle": 1.6336281798666925
+        },
+        {
+            "file_path": "proj_train/proj_train_0014.npy",
+            "angle": 1.7592918860102844
+        },
+        {
+            "file_path": "proj_train/proj_train_0015.npy",
+            "angle": 1.884955592153876
+        },
+        {
+            "file_path": "proj_train/proj_train_0016.npy",
+            "angle": 2.0106192982974678
+        },
+        {
+            "file_path": "proj_train/proj_train_0017.npy",
+            "angle": 2.1362830044410597
+        },
+        {
+            "file_path": "proj_train/proj_train_0018.npy",
+            "angle": 2.261946710584651
+        },
+        {
+            "file_path": "proj_train/proj_train_0019.npy",
+            "angle": 2.387610416728243
+        },
+        {
+            "file_path": "proj_train/proj_train_0020.npy",
+            "angle": 2.5132741228718345
+        },
+        {
+            "file_path": "proj_train/proj_train_0021.npy",
+            "angle": 2.6389378290154264
+        },
+        {
+            "file_path": "proj_train/proj_train_0022.npy",
+            "angle": 2.7646015351590183
+        },
+        {
+            "file_path": "proj_train/proj_train_0023.npy",
+            "angle": 2.8902652413026098
+        },
+        {
+            "file_path": "proj_train/proj_train_0024.npy",
+            "angle": 3.0159289474462017
+        },
+        {
+            "file_path": "proj_train/proj_train_0025.npy",
+            "angle": 3.1415926535897936
+        },
+        {
+            "file_path": "proj_train/proj_train_0026.npy",
+            "angle": 3.267256359733385
+        },
+        {
+            "file_path": "proj_train/proj_train_0027.npy",
+            "angle": 3.392920065876977
+        },
+        {
+            "file_path": "proj_train/proj_train_0028.npy",
+            "angle": 3.518583772020569
+        },
+        {
+            "file_path": "proj_train/proj_train_0029.npy",
+            "angle": 3.6442474781641603
+        },
+        {
+            "file_path": "proj_train/proj_train_0030.npy",
+            "angle": 3.769911184307752
+        },
+        {
+            "file_path": "proj_train/proj_train_0031.npy",
+            "angle": 3.8955748904513436
+        },
+        {
+            "file_path": "proj_train/proj_train_0032.npy",
+            "angle": 4.0212385965949355
+        },
+        {
+            "file_path": "proj_train/proj_train_0033.npy",
+            "angle": 4.1469023027385274
+        },
+        {
+            "file_path": "proj_train/proj_train_0034.npy",
+            "angle": 4.272566008882119
+        },
+        {
+            "file_path": "proj_train/proj_train_0035.npy",
+            "angle": 4.39822971502571
+        },
+        {
+            "file_path": "proj_train/proj_train_0036.npy",
+            "angle": 4.523893421169302
+        },
+        {
+            "file_path": "proj_train/proj_train_0037.npy",
+            "angle": 4.649557127312894
+        },
+        {
+            "file_path": "proj_train/proj_train_0038.npy",
+            "angle": 4.775220833456486
+        },
+        {
+            "file_path": "proj_train/proj_train_0039.npy",
+            "angle": 4.900884539600078
+        },
+        {
+            "file_path": "proj_train/proj_train_0040.npy",
+            "angle": 5.026548245743669
+        },
+        {
+            "file_path": "proj_train/proj_train_0041.npy",
+            "angle": 5.152211951887261
+        },
+        {
+            "file_path": "proj_train/proj_train_0042.npy",
+            "angle": 5.277875658030853
+        },
+        {
+            "file_path": "proj_train/proj_train_0043.npy",
+            "angle": 5.403539364174445
+        },
+        {
+            "file_path": "proj_train/proj_train_0044.npy",
+            "angle": 5.529203070318037
+        },
+        {
+            "file_path": "proj_train/proj_train_0045.npy",
+            "angle": 5.6548667764616285
+        },
+        {
+            "file_path": "proj_train/proj_train_0046.npy",
+            "angle": 5.7805304826052195
+        },
+        {
+            "file_path": "proj_train/proj_train_0047.npy",
+            "angle": 5.906194188748811
+        },
+        {
+            "file_path": "proj_train/proj_train_0048.npy",
+            "angle": 6.031857894892403
+        },
+        {
+            "file_path": "proj_train/proj_train_0049.npy",
+            "angle": 6.157521601035995
+        }
+    ],
+    "proj_test": [
+        {
+            "file_path": "proj_test/proj_test_0000.npy",
+            "angle": 0.06329675244508096
+        },
+        {
+            "file_path": "proj_test/proj_test_0001.npy",
+            "angle": 0.06527289517152343
+        },
+        {
+            "file_path": "proj_test/proj_test_0002.npy",
+            "angle": 0.10587276216259511
+        },
+        {
+            "file_path": "proj_test/proj_test_0003.npy",
+            "angle": 0.12963908605364058
+        },
+        {
+            "file_path": "proj_test/proj_test_0004.npy",
+            "angle": 0.13791619066508617
+        },
+        {
+            "file_path": "proj_test/proj_test_0005.npy",
+            "angle": 0.25426508524279157
+        },
+        {
+            "file_path": "proj_test/proj_test_0006.npy",
+            "angle": 0.30938178058884813
+        },
+        {
+            "file_path": "proj_test/proj_test_0007.npy",
+            "angle": 0.33957037300557164
+        },
+        {
+            "file_path": "proj_test/proj_test_0008.npy",
+            "angle": 0.4509851067036573
+        },
+        {
+            "file_path": "proj_test/proj_test_0009.npy",
+            "angle": 0.4883412337567088
+        },
+        {
+            "file_path": "proj_test/proj_test_0010.npy",
+            "angle": 0.5749987738735103
+        },
+        {
+            "file_path": "proj_test/proj_test_0011.npy",
+            "angle": 0.5827265812644012
+        },
+        {
+            "file_path": "proj_test/proj_test_0012.npy",
+            "angle": 0.6215394508441365
+        },
+        {
+            "file_path": "proj_test/proj_test_0013.npy",
+            "angle": 0.6701218768873093
+        },
+        {
+            "file_path": "proj_test/proj_test_0014.npy",
+            "angle": 0.7464303666763845
+        },
+        {
+            "file_path": "proj_test/proj_test_0015.npy",
+            "angle": 0.8366643629487514
+        },
+        {
+            "file_path": "proj_test/proj_test_0016.npy",
+            "angle": 0.8394464407979264
+        },
+        {
+            "file_path": "proj_test/proj_test_0017.npy",
+            "angle": 0.8850775771431612
+        },
+        {
+            "file_path": "proj_test/proj_test_0018.npy",
+            "angle": 0.8903773583383531
+        },
+        {
+            "file_path": "proj_test/proj_test_0019.npy",
+            "angle": 1.0333291344467361
+        },
+        {
+            "file_path": "proj_test/proj_test_0020.npy",
+            "angle": 1.0461508362365366
+        },
+        {
+            "file_path": "proj_test/proj_test_0021.npy",
+            "angle": 1.0892353081076873
+        },
+        {
+            "file_path": "proj_test/proj_test_0022.npy",
+            "angle": 1.1098007047730991
+        },
+        {
+            "file_path": "proj_test/proj_test_0023.npy",
+            "angle": 1.120896421019057
+        },
+        {
+            "file_path": "proj_test/proj_test_0024.npy",
+            "angle": 1.2142930627989421
+        },
+        {
+            "file_path": "proj_test/proj_test_0025.npy",
+            "angle": 1.2544960151375404
+        },
+        {
+            "file_path": "proj_test/proj_test_0026.npy",
+            "angle": 1.2725081322518161
+        },
+        {
+            "file_path": "proj_test/proj_test_0027.npy",
+            "angle": 1.2746706007614064
+        },
+        {
+            "file_path": "proj_test/proj_test_0028.npy",
+            "angle": 1.4400266925035379
+        },
+        {
+            "file_path": "proj_test/proj_test_0029.npy",
+            "angle": 1.468794852521135
+        },
+        {
+            "file_path": "proj_test/proj_test_0030.npy",
+            "angle": 1.5607145852398714
+        },
+        {
+            "file_path": "proj_test/proj_test_0031.npy",
+            "angle": 1.5792350840837557
+        },
+        {
+            "file_path": "proj_test/proj_test_0032.npy",
+            "angle": 1.6224492286110634
+        },
+        {
+            "file_path": "proj_test/proj_test_0033.npy",
+            "angle": 1.6827305808208284
+        },
+        {
+            "file_path": "proj_test/proj_test_0034.npy",
+            "angle": 1.7117948650564732
+        },
+        {
+            "file_path": "proj_test/proj_test_0035.npy",
+            "angle": 1.8006273589234092
+        },
+        {
+            "file_path": "proj_test/proj_test_0036.npy",
+            "angle": 1.800980015498961
+        },
+        {
+            "file_path": "proj_test/proj_test_0037.npy",
+            "angle": 1.9731701084689997
+        },
+        {
+            "file_path": "proj_test/proj_test_0038.npy",
+            "angle": 2.1943690172356045
+        },
+        {
+            "file_path": "proj_test/proj_test_0039.npy",
+            "angle": 2.232853932784711
+        },
+        {
+            "file_path": "proj_test/proj_test_0040.npy",
+            "angle": 2.27672178386273
+        },
+        {
+            "file_path": "proj_test/proj_test_0041.npy",
+            "angle": 2.4857673685363117
+        },
+        {
+            "file_path": "proj_test/proj_test_0042.npy",
+            "angle": 2.5597665862320973
+        },
+        {
+            "file_path": "proj_test/proj_test_0043.npy",
+            "angle": 2.5758877252838612
+        },
+        {
+            "file_path": "proj_test/proj_test_0044.npy",
+            "angle": 2.6453972244061856
+        },
+        {
+            "file_path": "proj_test/proj_test_0045.npy",
+            "angle": 2.725328999806243
+        },
+        {
+            "file_path": "proj_test/proj_test_0046.npy",
+            "angle": 2.776706825754694
+        },
+        {
+            "file_path": "proj_test/proj_test_0047.npy",
+            "angle": 2.8696510443339154
+        },
+        {
+            "file_path": "proj_test/proj_test_0048.npy",
+            "angle": 2.9614393509281816
+        },
+        {
+            "file_path": "proj_test/proj_test_0049.npy",
+            "angle": 3.0466712622327345
+        },
+        {
+            "file_path": "proj_test/proj_test_0050.npy",
+            "angle": 3.107469317711459
+        },
+        {
+            "file_path": "proj_test/proj_test_0051.npy",
+            "angle": 3.1076117005003683
+        },
+        {
+            "file_path": "proj_test/proj_test_0052.npy",
+            "angle": 3.2132538757554787
+        },
+        {
+            "file_path": "proj_test/proj_test_0053.npy",
+            "angle": 3.218405497035409
+        },
+        {
+            "file_path": "proj_test/proj_test_0054.npy",
+            "angle": 3.283718456469778
+        },
+        {
+            "file_path": "proj_test/proj_test_0055.npy",
+            "angle": 3.2979199314504988
+        },
+        {
+            "file_path": "proj_test/proj_test_0056.npy",
+            "angle": 3.3988789983589753
+        },
+        {
+            "file_path": "proj_test/proj_test_0057.npy",
+            "angle": 3.4339679714410725
+        },
+        {
+            "file_path": "proj_test/proj_test_0058.npy",
+            "angle": 3.558592397819862
+        },
+        {
+            "file_path": "proj_test/proj_test_0059.npy",
+            "angle": 3.6121985503079452
+        },
+        {
+            "file_path": "proj_test/proj_test_0060.npy",
+            "angle": 3.829595514366836
+        },
+        {
+            "file_path": "proj_test/proj_test_0061.npy",
+            "angle": 3.8946163901577746
+        },
+        {
+            "file_path": "proj_test/proj_test_0062.npy",
+            "angle": 4.145738194193672
+        },
+        {
+            "file_path": "proj_test/proj_test_0063.npy",
+            "angle": 4.152864784318893
+        },
+        {
+            "file_path": "proj_test/proj_test_0064.npy",
+            "angle": 4.16467953941646
+        },
+        {
+            "file_path": "proj_test/proj_test_0065.npy",
+            "angle": 4.224377609305965
+        },
+        {
+            "file_path": "proj_test/proj_test_0066.npy",
+            "angle": 4.262106260752784
+        },
+        {
+            "file_path": "proj_test/proj_test_0067.npy",
+            "angle": 4.469491175766875
+        },
+        {
+            "file_path": "proj_test/proj_test_0068.npy",
+            "angle": 4.50131622408832
+        },
+        {
+            "file_path": "proj_test/proj_test_0069.npy",
+            "angle": 4.528838029283243
+        },
+        {
+            "file_path": "proj_test/proj_test_0070.npy",
+            "angle": 4.631102111952771
+        },
+        {
+            "file_path": "proj_test/proj_test_0071.npy",
+            "angle": 4.714142450326132
+        },
+        {
+            "file_path": "proj_test/proj_test_0072.npy",
+            "angle": 4.719829619373771
+        },
+        {
+            "file_path": "proj_test/proj_test_0073.npy",
+            "angle": 4.9269552590245285
+        },
+        {
+            "file_path": "proj_test/proj_test_0074.npy",
+            "angle": 5.021507003594268
+        },
+        {
+            "file_path": "proj_test/proj_test_0075.npy",
+            "angle": 5.025784737480971
+        },
+        {
+            "file_path": "proj_test/proj_test_0076.npy",
+            "angle": 5.11070818352931
+        },
+        {
+            "file_path": "proj_test/proj_test_0077.npy",
+            "angle": 5.164560020319403
+        },
+        {
+            "file_path": "proj_test/proj_test_0078.npy",
+            "angle": 5.362036297078062
+        },
+        {
+            "file_path": "proj_test/proj_test_0079.npy",
+            "angle": 5.4218009682518655
+        },
+        {
+            "file_path": "proj_test/proj_test_0080.npy",
+            "angle": 5.448141504163095
+        },
+        {
+            "file_path": "proj_test/proj_test_0081.npy",
+            "angle": 5.457370766617703
+        },
+        {
+            "file_path": "proj_test/proj_test_0082.npy",
+            "angle": 5.468345439639708
+        },
+        {
+            "file_path": "proj_test/proj_test_0083.npy",
+            "angle": 5.474755304252503
+        },
+        {
+            "file_path": "proj_test/proj_test_0084.npy",
+            "angle": 5.570556775431733
+        },
+        {
+            "file_path": "proj_test/proj_test_0085.npy",
+            "angle": 5.631071553277499
+        },
+        {
+            "file_path": "proj_test/proj_test_0086.npy",
+            "angle": 5.63984546105991
+        },
+        {
+            "file_path": "proj_test/proj_test_0087.npy",
+            "angle": 5.641624784306062
+        },
+        {
+            "file_path": "proj_test/proj_test_0088.npy",
+            "angle": 5.654683014348211
+        },
+        {
+            "file_path": "proj_test/proj_test_0089.npy",
+            "angle": 5.656616769138402
+        },
+        {
+            "file_path": "proj_test/proj_test_0090.npy",
+            "angle": 5.693957333651801
+        },
+        {
+            "file_path": "proj_test/proj_test_0091.npy",
+            "angle": 5.778638850318995
+        },
+        {
+            "file_path": "proj_test/proj_test_0092.npy",
+            "angle": 5.8415721086839865
+        },
+        {
+            "file_path": "proj_test/proj_test_0093.npy",
+            "angle": 5.870720785670772
+        },
+        {
+            "file_path": "proj_test/proj_test_0094.npy",
+            "angle": 5.979967769648218
+        },
+        {
+            "file_path": "proj_test/proj_test_0095.npy",
+            "angle": 5.986435052855228
+        },
+        {
+            "file_path": "proj_test/proj_test_0096.npy",
+            "angle": 6.071667962182687
+        },
+        {
+            "file_path": "proj_test/proj_test_0097.npy",
+            "angle": 6.123978812214606
+        },
+        {
+            "file_path": "proj_test/proj_test_0098.npy",
+            "angle": 6.168899728818142
+        },
+        {
+            "file_path": "proj_test/proj_test_0099.npy",
+            "angle": 6.221377451071712
+        }
+    ],
+    "vol": "vol_gt.npy"
+}

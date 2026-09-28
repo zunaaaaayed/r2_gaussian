@@ -11,3 +11,8 @@ volume_raw
 FIPS_raw
 FIPS_processed
 other_scripts
+
+# Local execution artifacts
+logs/
+*.so
+*.o

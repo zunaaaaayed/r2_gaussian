@@ -408,3 +408,7 @@ If this repo helps you, please consider citing our work:
   year={2024}
 }
 ```
+
+## TRDP2 experiments
+
+- [Chest baseline reproduction](experiments/baseline_chest_50views/README.md)

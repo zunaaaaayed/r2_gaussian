@@ -1,0 +1,2 @@
+ 86710c2d4b46680c02301765dd79e465819c8f19 r2_gaussian/submodules/simple-knn (heads/main)
+ 33b4a621a697a305bc3a7610d290677b96beb181 r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm (0.9.5.3-2878-g33b4a621a)
