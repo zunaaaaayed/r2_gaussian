@@ -16,3 +16,6 @@ other_scripts
 logs/
 *.so
 *.o
+
+# Regenerable local code-navigation index and caches
+graphify-out/

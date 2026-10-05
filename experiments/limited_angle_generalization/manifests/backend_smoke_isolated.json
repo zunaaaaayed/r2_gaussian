@@ -1,0 +1,28 @@
+{
+  "kind": "tiny_baseline_backend_smoke",
+  "scientific_performance_evidence": false,
+  "backend_process_isolation": true,
+  "query_shape": [
+    16,
+    20,
+    24
+  ],
+  "query_peak_index": [
+    10,
+    8,
+    13
+  ],
+  "tv_loss": 0.003996930085122585,
+  "finite_parameter_gradients": true,
+  "query_elapsed_seconds": 0.14707437300012316,
+  "torch_peak_allocated_bytes": 309760,
+  "memory_note": "PyTorch allocator only; excludes TIGRE allocations",
+  "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12) \n[GCC 13.3.0]",
+  "torch": "2.1.2+cu118",
+  "cuda": "11.8",
+  "gpu": "NVIDIA RTX 4000 Ada Generation",
+  "wrapped_projection_max_error": 1.7136335372924805e-06,
+  "projection_tolerance": 1e-05,
+  "projector_elapsed_seconds": 0.2874993200002791,
+  "elapsed_seconds": 3.799771650999901
+}

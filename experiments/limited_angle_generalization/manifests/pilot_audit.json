@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-05",
+  "protocol_input_integrity": [
+    {
+      "protocol": "output/limited_angle_120_diagnostics/projection_angles/protocol.json",
+      "sha256": "326cc72affd34f7f2e1f95489f90169623682483f92cf7a3f706850863994546",
+      "input_count": 211,
+      "mismatches": []
+    },
+    {
+      "protocol": "output/limited_angle_120_diagnostics/fdk/protocol.json",
+      "sha256": "fe71c1506af5fcc0193e285329cae794fde833be312b1199872f1ff311f99855",
+      "input_count": 112,
+      "mismatches": []
+    },
+    {
+      "protocol": "output/limited_angle_120_diagnostics/fdk_vs_final/protocol.json",
+      "sha256": "d168407bb7ab5f467ba5ab72f64696c6a9bfd737e5fbf63feebfe6326c024611",
+      "input_count": 213,
+      "mismatches": []
+    },
+    {
+      "protocol": "output/limited_angle_120_diagnostics/acquisition_rotation/protocol.json",
+      "sha256": "1744d2b9a47eab9e972f55b9404a5155e9f0d58be7ce4b72683a3e4216c43ab7",
+      "input_count": 315,
+      "mismatches": []
+    }
+  ],
+  "pilot_snapshot_files": 610,
+  "pilot_snapshot_bytes": 1498699590
+}

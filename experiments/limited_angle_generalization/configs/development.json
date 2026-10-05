@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "volumes": [
+    {
+      "volume_id": "0_chest_cone",
+      "independence_group": "supplied_0_chest_cone_patient_unknown",
+      "population_role": "development",
+      "identity_evidence": "Only this supplied volume is locally available; patient identity and independent volumes remain unverified.",
+      "source": "data/synthetic_dataset/cone_ntrain_50_angle_360/0_chest_cone"
+    }
+  ],
+  "evaluation_count": 100,
+  "noise": {"model": "none", "seed": 0},
+  "method": {
+    "name": "r2_default", "optimization_seed": 0, "initialization_seed": 0,
+    "iterations": 30000, "lambda_tv": 0.05, "n_points": 50000,
+    "density_thresh": 0.05, "density_rescale": 0.15, "geometry_term": false
+  },
+  "acquisitions": [
+    {"case_id": "chest_control360", "volume_id": "0_chest_cone", "start_degrees": 0, "span_degrees": 360, "view_count": 50, "acquisition_role": "development", "stage": "planned_matched_control"},
+    {"case_id": "chest_start0_span120", "volume_id": "0_chest_cone", "start_degrees": 0, "span_degrees": 120, "view_count": 50, "acquisition_role": "development", "stage": "planned_development"},
+    {"case_id": "chest_start90_span120", "volume_id": "0_chest_cone", "start_degrees": 90, "span_degrees": 120, "view_count": 50, "acquisition_role": "development", "stage": "planned_development"},
+    {"case_id": "chest_start330_span120", "volume_id": "0_chest_cone", "start_degrees": 330, "span_degrees": 120, "view_count": 50, "acquisition_role": "validation", "stage": "reserved_orientation"},
+    {"case_id": "chest_start0_span90", "volume_id": "0_chest_cone", "start_degrees": 0, "span_degrees": 90, "view_count": 50, "acquisition_role": "validation", "stage": "reserved_span"},
+    {"case_id": "chest_start45_span150", "volume_id": "0_chest_cone", "start_degrees": 45, "span_degrees": 150, "view_count": 50, "acquisition_role": "validation", "stage": "reserved_combined_acquisition"}
+  ]
+}
