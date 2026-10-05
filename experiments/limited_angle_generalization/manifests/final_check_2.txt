@@ -1,0 +1,2 @@
+Dry run: one Gaussian on 16x20x24 voxels; two 3-view TIGRE projections on 24x32 pixels.
+No GPU imports or writes. Pass --execute after checking workstation GPU use.

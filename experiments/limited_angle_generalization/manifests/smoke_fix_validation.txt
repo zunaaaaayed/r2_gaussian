@@ -1,0 +1,52 @@
+{
+  "pilot_checks": [
+    {
+      "case": "arc_360",
+      "inside": 100,
+      "outside": 0,
+      "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+      "evaluation_files_sha256": "b3ce1ad84ca56190cdd75e658e20db408fd029779950c4cff6edd2dc5bd772a9"
+    },
+    {
+      "case": "arc_120",
+      "inside": 33,
+      "outside": 67,
+      "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+      "evaluation_files_sha256": "b3ce1ad84ca56190cdd75e658e20db408fd029779950c4cff6edd2dc5bd772a9"
+    },
+    {
+      "case": "arc_120_start_90",
+      "inside": 33,
+      "outside": 67,
+      "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+      "evaluation_files_sha256": "b3ce1ad84ca56190cdd75e658e20db408fd029779950c4cff6edd2dc5bd772a9"
+    }
+  ]
+}
+Validated: 6 cases, common evaluation offset 0.25 bins
+chest_control360: 50 views, [0, start+360), inside/outside 100/0, separation 0.900000 deg; development
+  planned output: output/limited_angle_generalization_v1/chest_control360_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_control360 --output data/trdp2/limited_angle_generalization_v1/chest_control360/init_chest_control360.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_control360 --model_path output/limited_angle_generalization_v1/chest_control360_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_control360/init_chest_control360.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+chest_start0_span120: 50 views, [0, start+120), inside/outside 34/66, separation 0.300000 deg; development
+  planned output: output/limited_angle_generalization_v1/chest_start0_span120_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_start0_span120 --output data/trdp2/limited_angle_generalization_v1/chest_start0_span120/init_chest_start0_span120.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_start0_span120 --model_path output/limited_angle_generalization_v1/chest_start0_span120_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_start0_span120/init_chest_start0_span120.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+chest_start90_span120: 50 views, [90, start+120), inside/outside 34/66, separation 0.300000 deg; development
+  planned output: output/limited_angle_generalization_v1/chest_start90_span120_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_start90_span120 --output data/trdp2/limited_angle_generalization_v1/chest_start90_span120/init_chest_start90_span120.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_start90_span120 --model_path output/limited_angle_generalization_v1/chest_start90_span120_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_start90_span120/init_chest_start90_span120.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+chest_start330_span120: 50 views, [330, start+120), inside/outside 33/67, separation 0.300000 deg; validation
+  planned output: output/limited_angle_generalization_v1/chest_start330_span120_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_start330_span120 --output data/trdp2/limited_angle_generalization_v1/chest_start330_span120/init_chest_start330_span120.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_start330_span120 --model_path output/limited_angle_generalization_v1/chest_start330_span120_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_start330_span120/init_chest_start330_span120.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+chest_start0_span90: 50 views, [0, start+90), inside/outside 25/75, separation 0.900000 deg; validation
+  planned output: output/limited_angle_generalization_v1/chest_start0_span90_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_start0_span90 --output data/trdp2/limited_angle_generalization_v1/chest_start0_span90/init_chest_start0_span90.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_start0_span90 --model_path output/limited_angle_generalization_v1/chest_start0_span90_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_start0_span90/init_chest_start0_span90.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+chest_start45_span150: 50 views, [45, start+150), inside/outside 41/59, separation 0.300000 deg; validation
+  planned output: output/limited_angle_generalization_v1/chest_start45_span150_r2_default_s0_i30000 (new)
+  blocked initialize template: python initialize_pcd.py --data data/trdp2/limited_angle_generalization_v1/chest_start45_span150 --output data/trdp2/limited_angle_generalization_v1/chest_start45_span150/init_chest_start45_span150.npy --recon_method fdk --n_points 50000 --density_thresh 0.05 --density_rescale 0.15
+  blocked train template: python train.py --source_path data/trdp2/limited_angle_generalization_v1/chest_start45_span150 --model_path output/limited_angle_generalization_v1/chest_start45_span150_r2_default_s0_i30000 --ply_path data/trdp2/limited_angle_generalization_v1/chest_start45_span150/init_chest_start45_span150.npy --iterations 30000 --lambda_tv 0.05 --checkpoint_iterations 5000 10000 15000 20000 25000 30000
+PREPARATION ONLY: no generation, initialization, training, resume, or evaluation launched.
+preparation only; dataset generation and run lifecycle review pending; verify backend smoke separately

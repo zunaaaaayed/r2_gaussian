@@ -1,0 +1,25 @@
+{
+  "script_sha256": "f14ee4404450a951ef8cac584a3c905de384397bdf36a4ba40a23663f3ed246c",
+  "volume_shape": [
+    256,
+    256,
+    256
+  ],
+  "slice_fractions": [
+    0.35,
+    0.5,
+    0.65
+  ],
+  "image_display_range": [
+    0,
+    1
+  ],
+  "error_display": "Pooled 99th percentile per axis; shared across methods",
+  "regional_mask": "Reference > 0.05; exploratory, not anatomical segmentation",
+  "intensity_units": "Dataset normalized attenuation; not HU",
+  "prediction_sha256": {
+    "360": "a628d583903138539d228a36d8c0477459dedc21cafc72f9ec515a4cf17dd0dc",
+    "120": "fe63b925218dd3d4976c01b0553edc97e9c9d9b76f70a983689369ede3fd4a47"
+  },
+  "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd"
+}

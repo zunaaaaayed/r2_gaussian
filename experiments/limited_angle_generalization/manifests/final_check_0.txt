@@ -1,0 +1,26 @@
+test_constant_tv_zero_with_finite_gradients (test_baseline_cpu.BaselineTest) ... ok
+test_repository_psnr_fixed_range_no_clipping (test_baseline_cpu.BaselineTest) ... ok
+test_tv_ramp_value_axis_symmetry_and_gradient (test_baseline_cpu.BaselineTest) ... ok
+test_circular_overlap_and_duplicate (test_benchmark.AnglesTest) ... ok
+test_historical_grids_and_counts (test_benchmark.AnglesTest) ... ok
+test_invalid_angles (test_benchmark.AnglesTest) ... ok
+test_joint_coordinate_rotation_sector_equivariance (test_benchmark.AnglesTest) ... ok
+test_midpoints_collide_for_ninety_degree_case (test_benchmark.AnglesTest) ... ok
+test_wraparound_half_open_tolerance (test_benchmark.AnglesTest) ... ok
+test_no_gpu_dependencies_on_import (test_benchmark.ImportTest) ... ok
+test_changed_source_is_detected (test_benchmark.ManifestTest) ... ok
+test_duplicate_case_and_acquisition (test_benchmark.ManifestTest) ... ok
+test_exclusive_write_and_existing_output_states (test_benchmark.ManifestTest) ... ok
+test_inconsistent_spacing_rejected (test_benchmark.ManifestTest) ... ok
+test_manifest_tampering_even_with_recomputed_hash (test_benchmark.ManifestTest) ... ok
+test_no_planning_writes (test_benchmark.ManifestTest) ... ok
+test_path_escape_rejected (test_benchmark.ManifestTest) ... ok
+test_patient_group_leakage (test_benchmark.ManifestTest) ... ok
+test_same_source_hash_leakage_under_new_identity (test_benchmark.ManifestTest) ... ok
+test_shared_evaluation_and_physical_geometry (test_benchmark.ManifestTest) ... ok
+test_unsupported_seed_or_geometry_term_rejected (test_benchmark.ManifestTest) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.169s
+
+OK

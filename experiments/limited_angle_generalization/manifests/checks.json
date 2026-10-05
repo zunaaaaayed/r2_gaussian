@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-05",
+  "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12) \n[GCC 13.3.0]",
+  "unit_tests_passed": 21,
+  "gpu_smoke_executed": false,
+  "full_experiments_launched": false,
+  "current_manifest": "experiments/limited_angle_generalization/manifests/development_v2.json",
+  "commands": [
+    {
+      "command": [
+        "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/limited_angle_generalization/tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+        "experiments/limited_angle_generalization/prepare.py",
+        "--manifest",
+        "experiments/limited_angle_generalization/manifests/development_v2.json",
+        "--check-pilot",
+        "--dry-run"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+        "experiments/limited_angle_generalization/smoke_gpu.py",
+        "--report",
+        "/tmp/trdp2-smoke-dry-run-only.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pilot_snapshot_files": 610,
+  "pilot_preserved_except_continuation_note": 609,
+  "saved_protocol_input_hash_entries_verified": 851
+}
