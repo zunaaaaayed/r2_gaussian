@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "command": [
+    "/autofs/unitytravail/travail/mdzislam/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+    "-u",
+    "initialize_pcd.py",
+    "--data",
+    "data/trdp2/limited_angle_generalization_v1/chest_start0_span120",
+    "--output",
+    "data/trdp2/limited_angle_generalization_v1/chest_start0_span120/init_chest_start0_span120.npy",
+    "--recon_method",
+    "fdk",
+    "--n_points",
+    "50000",
+    "--density_thresh",
+    "0.05",
+    "--density_rescale",
+    "0.15"
+  ],
+  "returncode": 0,
+  "started_unix_seconds": 1791370975.009109,
+  "peak_vram_bytes": null,
+  "peak_vram_note": "not measured by this runner",
+  "artifacts": {
+    "initializer_sha256": "8b7a1200c380fe4941566748ca6c3209a269edfc029dd3a25b80f7c478b2923a"
+  },
+  "elapsed_seconds": 11.711814623999999
+}

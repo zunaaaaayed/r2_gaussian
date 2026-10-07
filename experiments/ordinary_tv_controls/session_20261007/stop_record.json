@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-07",
+  "reason": "user requested stop and move computers",
+  "queue_stopped": true,
+  "tv_training_started": false,
+  "completed_baseline_cases": [
+    "chest_start0_span120",
+    "chest_start90_span120"
+  ],
+  "remaining_tmux_session": "trdp2-generalization (untouched)",
+  "artifact_files": 655
+}

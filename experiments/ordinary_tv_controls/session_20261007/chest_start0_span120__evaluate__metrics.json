@@ -1,0 +1,37 @@
+{
+  "mae": 0.013699025882975504,
+  "rmse": 0.028468736987767907,
+  "psnr_peak_1": 30.9126359970049,
+  "perfect_match": false,
+  "psnr_peak": 1.0,
+  "normalization": "none",
+  "clipping": "none",
+  "boundary_voxels": 1480749,
+  "boundary_threshold": 7.701018389310996,
+  "boundary_mae": 0.0388022662400934,
+  "boundary_gradient_error": 7.990217053680614,
+  "boundary_gradient_axis_error": [
+    4.719575403269534,
+    4.662324711200068,
+    2.0415185291199225
+  ],
+  "ssim_normalization": "none; inherited volume SSIM skips zero-reference slices",
+  "slice_aggregated_ssim": 0.9010175665219625,
+  "ssim_axis": [
+    0.8939939141273499,
+    0.904657244682312,
+    0.9044015407562256
+  ],
+  "ssim_valid_slices": [
+    256,
+    256,
+    256
+  ],
+  "iteration": 30000,
+  "case_id": "chest_start0_span120",
+  "manifest_sha256": "15febae8381598a72801c2afed717cf5bd6cc1e3fe6cd86773efa6ad15904ca6",
+  "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+  "prediction_sha256": "e00145492001c48b2e05a3254813528d452df5424d984d28f485ca220b44a8f4",
+  "gaussian_projection_metrics": "not computed",
+  "tigre_projection_metrics": "not computed"
+}
