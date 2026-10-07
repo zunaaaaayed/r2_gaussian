@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-07",
+  "research_python": "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+  "unittest_discover": {"passed": 33, "failed": 0},
+  "manifest": "development_v4.json",
+  "manifest_validation_and_pilot_check": "passed",
+  "pilot_snapshot": {"unchanged": 609, "previously_documented_note_change": "experiments/limited_angle_120/CONTINUE_HERE.md"},
+  "single_case_dry_runs": ["generate", "initialize", "train", "evaluate"],
+  "dry_run_case": "chest_start0_span120",
+  "diff_whitespace_check": "passed",
+  "dataset_test_projector": "synthetic injected CPU projector",
+  "new_gpu_workflow_executed": false,
+  "full_reconstruction_executed": false,
+  "scientific_performance_evidence": false
+}
