@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "command": [
+    "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+    "-u",
+    "/autofs/unitytravail/travail/mdzislam/trdp2/r2_gaussian/experiments/limited_angle_generalization/evaluate_cases.py",
+    "--manifest",
+    "/autofs/unitytravail/travail/mdzislam/trdp2/r2_gaussian/experiments/limited_angle_generalization/manifests/development_v4.json",
+    "--case",
+    "chest_start90_span120",
+    "--report",
+    "/autofs/unitytravail/travail/mdzislam/trdp2/r2_gaussian/output/limited_angle_generalization_jobs/chest_start90_span120_r2_default_s0_i30000__evaluate/metrics.json"
+  ],
+  "returncode": 0,
+  "started_unix_seconds": 1791377697.9586372,
+  "peak_vram_bytes": null,
+  "peak_vram_note": "not measured by this runner",
+  "artifacts": {
+    "metrics_sha256": "5e37fbf0b764422bba6081aea6b7795e842a95fc4d9a36e8977dcc3ef4dff370"
+  },
+  "elapsed_seconds": 92.51301097999931
+}

@@ -1,0 +1,37 @@
+{
+  "status": "completed",
+  "command": [
+    "/net/cremi/mdzislam/espaces/travail/trdp2/tools/miniforge3/envs/trdp2-r2/bin/python",
+    "-u",
+    "train.py",
+    "--source_path",
+    "data/trdp2/limited_angle_generalization_v1/chest_start90_span120",
+    "--model_path",
+    "output/limited_angle_generalization_v1/chest_start90_span120_r2_default_s0_i30000",
+    "--ply_path",
+    "data/trdp2/limited_angle_generalization_v1/chest_start90_span120/init_chest_start90_span120.npy",
+    "--iterations",
+    "30000",
+    "--lambda_tv",
+    "0.05",
+    "--checkpoint_iterations",
+    "5000",
+    "10000",
+    "15000",
+    "20000",
+    "25000",
+    "30000"
+  ],
+  "returncode": 0,
+  "started_unix_seconds": 1791375057.773085,
+  "peak_vram_bytes": null,
+  "peak_vram_note": "not measured by this runner",
+  "artifacts": {
+    "point_cloud/iteration_30000/vol_pred.npy": "9940828e0cc01d50874040e4fe5e27be76d42b2574714360f3c80a748a9977b3",
+    "point_cloud/iteration_30000/vol_gt.npy": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+    "point_cloud/iteration_30000/point_cloud.pickle": "72e8adfda589ac043c874ff16a22148b5cce048862efdf9199b1a5f04467dc8b",
+    "eval/iter_030000/eval3d.yml": "48043ef1ceddd3a72331282ed44fafa1b2159bc92178e88f7858c68976a189b2",
+    "ckpt/chkpnt30000.pth": "5e7a7b5e157f9f4de82c342485f7a6b4909ae44abfc4a064a5c14c63bc8482ef"
+  },
+  "elapsed_seconds": 2638.9250086619995
+}

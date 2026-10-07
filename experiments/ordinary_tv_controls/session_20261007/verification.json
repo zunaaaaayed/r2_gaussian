@@ -1,0 +1,6 @@
+{
+  "archive_members_verified": 655,
+  "control_tests_passed": 3,
+  "control_dry_run_after_staging": "passed",
+  "gpu_training_stopped": true
+}
