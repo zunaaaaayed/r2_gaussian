@@ -2,7 +2,8 @@
 
 Prepared 5 October 2026 at baseline commit
 `327a731834ad3e4f6b89a1e993df01cd3fa1bb6d`, branch
-`experiment/limited-angle-120`. Files are local changes; no commit or push was made.
+`experiment/limited-angle-120`. Preparation and backend isolation were committed as `a26f8f8` and pushed.
+Continuation is on `experiment/limited-angle-generalization` (7 October 2026).
 Research objective: one reconstruction rule with frozen settings that transfers
 across limited-angle acquisition configurations and independent volumes.
 Original method credit: [R²-Gaussian](https://github.com/Ruyi-Zha/r2_gaussian).
@@ -18,7 +19,7 @@ Working [repository](https://github.com/zunaaaaayed/r2_gaussian).
 | `regularizer_design.md` | Verified TV/query/density-control behavior, conditional design and falsification gates |
 | `configs/development.json` | Six planned configurations; only the real available chest source is assigned |
 | `benchmark.py`, `prepare.py` | CPU-only resolution, source/code hashes, explicit degree/radian arrays, shared disjoint grid, leakage/overwrite checks |
-| `manifests/development_v3.json` | Current resolved source/config snapshot; status is planned, not generated |
+| `manifests/development_v4.json` | Current resolved source/config snapshot; status is planned, not generated |
 | `manifests/development_v1.json` | Superseded preparation snapshot before correcting the smoke's voxel-center convention; intentionally fails current code-hash validation; never executed |
 | `manifests/pilot_preservation.json`, `pilot_audit.json` | Before-edit hashes and saved diagnostic input-integrity checks |
 | `manifests/checks.json`, `final_check_0.txt`, `final_check_1.txt`, `final_check_2.txt` | Final Python 3.9 verification summary and actual command outputs |
@@ -32,15 +33,14 @@ preserved. No baseline training/initialization implementation was modified. No
 new full GPU run was launched. No geometry regularizer was implemented because
 the direction/strength rule lacks validation.
 
-The preparation CLI deliberately has **no execution or resume path**. It identifies
-new/existing outputs and distinguishes completed artifacts from unverified
-checkpoints/incomplete directories; it refuses every existing destination.
-Printed initialization/training command templates are review material only;
-their inputs do not yet exist and they must be executed through the future guarded
-runner after generation and hash verification, not copied into a sweep.
-It does not infer resume safety from a checkpoint filename. A reviewed generator,
-training runner and evaluator are later deliverables. This bounds the work to
-Section 17 rather than silently turning a proposed manifest into a GPU sweep.
+The preparation CLI remains read-only except for explicitly freezing a manifest.
+The new `datasets.py`, `run_cases.py`, and `evaluate_cases.py` implement shared
+projection generation, integrity checks, separate stage processes, failure records,
+and fixed-final volume metrics. See [workflow.md](workflow.md) for commands and
+current limitations. Execution requires one development case and `--execute`;
+reserved acquisitions remain blocked. No automatic retry or checkpoint resume is
+implemented. CPU tests use an injected synthetic projector; the complete new
+workflow has not yet been exercised on the GPU.
 
 The historical grid tests pass with 100/0, 33/67, 33/67 sector counts. The new 90°
 case would overlap the historical midpoint grid; the six-case snapshot uses a
@@ -63,26 +63,25 @@ git status --short
 nvidia-smi
 python -m unittest discover -s experiments/limited_angle_generalization/tests -v
 python experiments/limited_angle_generalization/prepare.py \
-  --manifest experiments/limited_angle_generalization/manifests/development_v3.json \
+  --manifest experiments/limited_angle_generalization/manifests/development_v4.json \
   --check-pilot --dry-run
 ```
 
-The test suite now has 23 tests, including worker isolation/failure checks. All passed in the existing Python 3.9 research
-environment on CPU. System Python 3.13 passes the 20 standard-library tests and
-skips the three PyTorch checks. No dependency installation is required.
+The test suite now has 33 tests, including dataset corruption and stage failure checks. All passed in the existing Python 3.9 research
+environment on CPU. Use the research environment for the NumPy and PyTorch tests. No dependency installation is required.
 
 Next, inspect the smoke plan (this command does not import GPU libraries):
 
 ```bash
 python experiments/limited_angle_generalization/smoke_gpu.py \
-  --report output/generalization_backend_smoke_20261005_v1.json
+  --report output/generalization_backend_smoke_20261007_v1.json
 ```
 
 After confirming the workstation is available, the exact tiny GPU command is:
 
 ```bash
 python experiments/limited_angle_generalization/smoke_gpu.py --execute \
-  --report output/generalization_backend_smoke_20261005_v1.json
+  --report output/generalization_backend_smoke_20261007_v1.json
 ```
 
 The corrected smoke passed on the workstation GPU after isolating the two backends
@@ -103,7 +102,7 @@ python experiments/limited_angle_generalization/prepare.py \
   --config experiments/limited_angle_generalization/configs/development.json --dry-run
 python experiments/limited_angle_generalization/prepare.py \
   --config experiments/limited_angle_generalization/configs/development.json \
-  --write experiments/limited_angle_generalization/manifests/development_v4.json
+  --write experiments/limited_angle_generalization/manifests/development_v5.json
 ```
 
 Code or source changes invalidate a frozen manifest: review them and create a new
@@ -121,10 +120,9 @@ snapshot. Do not bypass validation or replace the working CUDA/TIGRE stack.
   investigate with controlled phantoms before changing this inherited convention.
 - Determine whether a gain survives tuned ordinary TV, uniform-strength and wrong-
   orientation controls while preserving boundaries at frozen settings.
-- Implement shared-evaluation generation, dataset verification and a guarded
-  runner/evaluator before a development pair. Preserve initializer pairing, log
-  process exit status and measure peak VRAM. Exact checkpoint continuation is
-  currently unverified.
+- Exercise the new dataset generator on the GPU before a development pair.
+  Projection-domain evaluation and peak-VRAM measurement remain unimplemented.
+  Exact checkpoint continuation is currently unverified.
 
 The first subsequent reconstruction pair should be one baseline and one tuned-TV
 setting on development data after backend/data correctness gates: roughly 38–46
@@ -132,5 +130,5 @@ minutes of training, reserve one hour plus generation/init overhead, and at leas
 1 GiB free for its datasets/checkpoints/diagnostics. This is an estimate from
 pilot logs, not authorization or a command to launch a full sweep.
 
-The earlier `development_v2.json` is superseded by v3 after the subprocess-isolation fix.
+Snapshots v1–v3 are superseded by v4 after adding the guarded workflow.
 Historical check logs retain their original results; they do not describe the fixed smoke.

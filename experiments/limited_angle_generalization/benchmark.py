@@ -216,7 +216,7 @@ def build_manifest(config, root=REPO):
     result = {"schema_version": 1, "config": copy.deepcopy(config), "volumes": volumes,
               "evaluation_offset_bins": offset, "angle_tolerance_degrees": TOL_DEG,
               "cases": cases, "provenance": provenance(root),
-              "execution_gate": "preparation only; dataset generation and run lifecycle review pending; verify backend smoke separately"}
+              "execution_gate": "preparer is read-only; run_cases requires an explicit development case and --execute; full sweeps are not authorized"}
     result["manifest_sha256"] = digest(result)
     return result
 
