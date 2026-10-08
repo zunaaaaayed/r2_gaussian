@@ -1,0 +1,10 @@
+# LaTeX build intermediates; retain compiled report PDFs.
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Ready-to-upload report source bundle.
+!Week3/TRDP2_Week3_Overleaf.zip

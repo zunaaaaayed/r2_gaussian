@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-08",
+  "selected_lambda_tv": 0.05,
+  "selection_rule_file": "experiments/ordinary_tv_controls/README.md",
+  "selection_rule_sha256": "fb214f4677661d4ad4e6c3516029e6756c8c85a8f2fa20096f5a116af5d092bc",
+  "eligible_weights": [
+    0.05
+  ],
+  "iterations": 30000,
+  "optimization_seed": 0,
+  "geometry_term": false,
+  "scope": "Frozen ordinary-TV reference; two orientations of one development volume, not independent-volume evidence",
+  "rows": [
+    {
+      "case_id": "chest_start0_span120",
+      "lambda_tv": 0.025,
+      "metrics": {
+        "mae": 0.014075068923942407,
+        "rmse": 0.02895338986774022,
+        "psnr_peak_1": 30.76601163377903,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.03833023167717479,
+        "boundary_gradient_error": 7.821494551672348,
+        "boundary_gradient_axis_error": [
+          4.586378868660876,
+          4.598405003332486,
+          2.0192565903691944
+        ],
+        "slice_aggregated_ssim": 0.898561934630076,
+        "lambda_tv": 0.025,
+        "case_id": "chest_start0_span120",
+        "iteration": 30000,
+        "initializer_sha256": "8b7a1200c380fe4941566748ca6c3209a269edfc029dd3a25b80f7c478b2923a",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "dd684b6411e6069ffa2e8763ec110c688807bbd6ceb98b53751ed81b2cc7d86a"
+      },
+      "metrics_sha256": "f31f9e7a59a4de880aafd4b5311a995d88268b354051b2387794c5b9a224b829",
+      "metrics_path": "output/ordinary_tv_control_jobs/chest_start0_span120_ordinary_tv_0p025_s0_i30000/metrics.json"
+    },
+    {
+      "case_id": "chest_start90_span120",
+      "lambda_tv": 0.025,
+      "metrics": {
+        "mae": 0.017603722984995858,
+        "rmse": 0.03741983375189964,
+        "psnr_peak_1": 28.537962926133858,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.056113803260075326,
+        "boundary_gradient_error": 10.54584842358753,
+        "boundary_gradient_axis_error": [
+          7.834955961516226,
+          4.11212204197763,
+          2.1631612902035315
+        ],
+        "slice_aggregated_ssim": 0.8602078954378763,
+        "lambda_tv": 0.025,
+        "case_id": "chest_start90_span120",
+        "iteration": 30000,
+        "initializer_sha256": "8a263a567535c3665cc45d85fafcbec85f7f004e11eebf9b7bc51dcd2cd15827",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "dc675609bc3c32440fb79658d585eeed391e8a76dbffbd84c21c0a7e7abac1d0"
+      },
+      "metrics_sha256": "381dd12aa8a7d6d09bc244f13de6eeb25669fb76fd95826f006f51d8b638d5bd",
+      "metrics_path": "output/ordinary_tv_control_jobs/chest_start90_span120_ordinary_tv_0p025_s0_i30000/metrics.json"
+    },
+    {
+      "case_id": "chest_start0_span120",
+      "lambda_tv": 0.05,
+      "metrics": {
+        "mae": 0.013699025882975504,
+        "rmse": 0.028468736987767907,
+        "psnr_peak_1": 30.9126359970049,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.0388022662400934,
+        "boundary_gradient_error": 7.990217053680614,
+        "boundary_gradient_axis_error": [
+          4.719575403269534,
+          4.662324711200068,
+          2.0415185291199225
+        ],
+        "ssim_normalization": "none; inherited volume SSIM skips zero-reference slices",
+        "slice_aggregated_ssim": 0.9010175665219625,
+        "ssim_axis": [
+          0.8939939141273499,
+          0.904657244682312,
+          0.9044015407562256
+        ],
+        "ssim_valid_slices": [
+          256,
+          256,
+          256
+        ],
+        "iteration": 30000,
+        "case_id": "chest_start0_span120",
+        "manifest_sha256": "15febae8381598a72801c2afed717cf5bd6cc1e3fe6cd86773efa6ad15904ca6",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "e00145492001c48b2e05a3254813528d452df5424d984d28f485ca220b44a8f4",
+        "gaussian_projection_metrics": "not computed",
+        "tigre_projection_metrics": "not computed"
+      },
+      "metrics_sha256": "9609d168657ab6ccd1b78c0a95c36686f6551e2cf394f87c38897d77ed918e9f",
+      "metrics_path": "output/limited_angle_generalization_jobs/chest_start0_span120_r2_default_s0_i30000__evaluate/metrics.json"
+    },
+    {
+      "case_id": "chest_start90_span120",
+      "lambda_tv": 0.05,
+      "metrics": {
+        "mae": 0.017251606748193777,
+        "rmse": 0.037190980384505405,
+        "psnr_peak_1": 28.59124746268401,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.05653726420916773,
+        "boundary_gradient_error": 10.70338456208144,
+        "boundary_gradient_axis_error": [
+          7.945636620933409,
+          4.187764509181993,
+          2.178707462822518
+        ],
+        "ssim_normalization": "none; inherited volume SSIM skips zero-reference slices",
+        "slice_aggregated_ssim": 0.8623778025309244,
+        "ssim_axis": [
+          0.8703667521476746,
+          0.8545879125595093,
+          0.8621787428855896
+        ],
+        "ssim_valid_slices": [
+          256,
+          256,
+          256
+        ],
+        "iteration": 30000,
+        "case_id": "chest_start90_span120",
+        "manifest_sha256": "15febae8381598a72801c2afed717cf5bd6cc1e3fe6cd86773efa6ad15904ca6",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "9940828e0cc01d50874040e4fe5e27be76d42b2574714360f3c80a748a9977b3",
+        "gaussian_projection_metrics": "not computed",
+        "tigre_projection_metrics": "not computed"
+      },
+      "metrics_sha256": "5e37fbf0b764422bba6081aea6b7795e842a95fc4d9a36e8977dcc3ef4dff370",
+      "metrics_path": "output/limited_angle_generalization_jobs/chest_start90_span120_r2_default_s0_i30000__evaluate/metrics.json"
+    },
+    {
+      "case_id": "chest_start0_span120",
+      "lambda_tv": 0.1,
+      "metrics": {
+        "mae": 0.01394863884935027,
+        "rmse": 0.028899374525192364,
+        "psnr_peak_1": 30.78223113324073,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.040599597930784145,
+        "boundary_gradient_error": 8.418065961526388,
+        "boundary_gradient_axis_error": [
+          5.038623772545541,
+          4.832659013437103,
+          2.11533693315194
+        ],
+        "slice_aggregated_ssim": 0.8988883892695109,
+        "lambda_tv": 0.1,
+        "case_id": "chest_start0_span120",
+        "iteration": 30000,
+        "initializer_sha256": "8b7a1200c380fe4941566748ca6c3209a269edfc029dd3a25b80f7c478b2923a",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "ea5da18419b77b172c671bffe6fe16c15bb37193e76b30e18ad4e61591dc154e"
+      },
+      "metrics_sha256": "c17b2f5b55eab01ee1ea7cdee14571f5db6c859dc2e1c7b6336b5571125e9728",
+      "metrics_path": "output/ordinary_tv_control_jobs/chest_start0_span120_ordinary_tv_0p1_s0_i30000/metrics.json"
+    },
+    {
+      "case_id": "chest_start90_span120",
+      "lambda_tv": 0.1,
+      "metrics": {
+        "mae": 0.0175509210570471,
+        "rmse": 0.03780792596927956,
+        "psnr_peak_1": 28.448342921832968,
+        "perfect_match": false,
+        "psnr_peak": 1.0,
+        "normalization": "none",
+        "clipping": "none",
+        "boundary_voxels": 1480749,
+        "boundary_threshold": 7.701018389310996,
+        "boundary_mae": 0.05822991867215109,
+        "boundary_gradient_error": 11.055537577990565,
+        "boundary_gradient_axis_error": [
+          8.186191381482107,
+          4.355816644724576,
+          2.2356462036764695
+        ],
+        "slice_aggregated_ssim": 0.8601810733477274,
+        "lambda_tv": 0.1,
+        "case_id": "chest_start90_span120",
+        "iteration": 30000,
+        "initializer_sha256": "8a263a567535c3665cc45d85fafcbec85f7f004e11eebf9b7bc51dcd2cd15827",
+        "reference_sha256": "c895f1f7127a2ba7b25330240e16cd28b75286e037d4bcd9419a63282bd5dedd",
+        "prediction_sha256": "b734cb238b5f3c444f7eaa07d196c9a607a94cf8bf87ca4b5c2fb89429f3da60"
+      },
+      "metrics_sha256": "cff6e271fe1df202e940b8d5f3827b6385009a0facf9fef363a88935d3cc5cf2",
+      "metrics_path": "output/ordinary_tv_control_jobs/chest_start90_span120_ordinary_tv_0p1_s0_i30000__chani_20261008/metrics.json"
+    }
+  ],
+  "baseline_manifest_file_sha256": "e2f99c12b2004a19e3b3b3c6880990ec8c1ae78dd0ed2d61ca3bd05c6ced47b7",
+  "record_sha256": "e061271951fd4fd1bd53b3dc0fa158445bc596c922580f6d849bc97e534f196e"
+}
