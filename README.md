@@ -37,11 +37,14 @@ These reproduce the completed pilot and demonstrate orientation sensitivity on
 Metrics use the supplied unit-range reference without clipping predicted values.
 See the protocol for the SSIM and boundary definitions.
 
-As of 7 October 2026, GPU work is stopped for a workstation transfer. Four
-ordinary-TV controls (weights 0.025 and 0.1 at both orientations) are prepared but
-have not started. Reserved acquisitions are untouched. No additional independent
-volumes have been downloaded. Do not restart the archived queue scripts on the
-old workstation.
+As of 8 October 2026, all four ordinary-TV controls (weights 0.025 and 0.1 at
+both orientations) have completed. **TV 0.05 remains the frozen reference** under
+the predeclared selection rule. A six-subject LIDC-IDRI candidate cohort is recorded;
+the first development series has been downloaded and passed its DICOM header audit.
+Pixel preprocessing and independence from the pilot remain unverified. Reserved
+acquisitions are untouched and no GPU training is queued. See the
+[independent-volume preparation](experiments/independent_volume_evaluation/README.md)
+for results, evidence and remaining gates.
 
 ## Project guide
 

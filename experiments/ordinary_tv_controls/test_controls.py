@@ -23,6 +23,20 @@ class PairingTest(unittest.TestCase):
         self.assertEqual(case['data_directory'], self.base['data_directory'])
         self.assertEqual(self.base, original)
 
+    def test_fresh_attempt_changes_only_destination(self):
+        original, first = controls.control_case(self.base, '0.1')
+        retry, second = controls.control_case(self.base, '0.1', 'chani_20261008')
+        self.assertNotEqual(original['run_id'], retry['run_id'])
+        self.assertEqual(original['initializer'], retry['initializer'])
+        self.assertEqual(original['method'], retry['method'])
+        self.assertEqual([i for i,(a,b) in enumerate(zip(first,second)) if a != b],
+                         [first.index('--model_path')+1])
+
+    def test_attempt_path_escape_rejected(self):
+        for label in ('../escape', '/absolute', '', 'a/b'):
+            with self.assertRaises(ValueError):
+                controls.control_case(self.base, '0.1', label)
+
     def test_reserved_acquisition_is_blocked(self):
         with self.assertRaisesRegex(ValueError, 'reserved'):
             controls.control_case(self.manifest['cases'][3], '0.1')

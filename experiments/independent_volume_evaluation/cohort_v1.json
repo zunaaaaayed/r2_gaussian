@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "collection": "LIDC-IDRI",
+  "selection": "First six numeric subject IDs after excluding the candidate pilot subject 0001; convenience cohort, not representative sampling. One CT series returned per subject.",
+  "excluded_subjects": [
+    "LIDC-IDRI-0001"
+  ],
+  "pilot_identity_status": "upstream raw_metadata.py maps 0_chest to 0001; supplied volume identity not verified",
+  "split_status": "Assigned before reconstruction; candidate cohort pending DICOM geometry and identity audit",
+  "frozen_lambda_tv": 0.05,
+  "subjects": [
+    {
+      "subject_id": "LIDC-IDRI-0002",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.490157381160200744295382098329",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.619372068417051974713149104919",
+      "role": "development",
+      "metadata_file": "metadata/lidc_0002_series.json",
+      "metadata_sha256": "27fe4a21be8de8816dd0f93bf5ac93271f0a1805b726bc51183f6a05d5a8f47e",
+      "expected_image_count": 261,
+      "reported_uncompressed_bytes": 137396696,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.619372068417051974713149104919",
+      "status": "metadata_verified_raw_not_audited"
+    },
+    {
+      "subject_id": "LIDC-IDRI-0003",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.101370605276577556143013894866",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.170706757615202213033480003264",
+      "role": "development",
+      "metadata_file": "metadata/lidc_0003_series.json",
+      "metadata_sha256": "3fa000ffc04357f90d6bf03aa63f52596a2b388a6e13c6c840729a709df35c42",
+      "expected_image_count": 140,
+      "reported_uncompressed_bytes": 73704090,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.170706757615202213033480003264",
+      "status": "metadata_verified_raw_not_audited"
+    },
+    {
+      "subject_id": "LIDC-IDRI-0004",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.191425307197546732281885591780",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.323541312620128092852212458228",
+      "role": "validation",
+      "metadata_file": "metadata/lidc_0004_series.json",
+      "metadata_sha256": "e5b11c7156791cc0a2dce98a2acb945edf1baec84b0b1a26c37061b9dafdf7b7",
+      "expected_image_count": 241,
+      "reported_uncompressed_bytes": 126870638,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.323541312620128092852212458228",
+      "status": "metadata_verified_raw_not_audited"
+    },
+    {
+      "subject_id": "LIDC-IDRI-0005",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.190188259083742759886805142125",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.129007566048223160327836686225",
+      "role": "validation",
+      "metadata_file": "metadata/lidc_0005_series.json",
+      "metadata_sha256": "4434b14e1e1600775cf18d5c1e6be92c241dd9897e5621ca872e3f8f3cb7946d",
+      "expected_image_count": 133,
+      "reported_uncompressed_bytes": 70020700,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.129007566048223160327836686225",
+      "status": "metadata_verified_raw_not_audited"
+    },
+    {
+      "subject_id": "LIDC-IDRI-0006",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.324680252006411183918098592500",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.132817748896065918417924920957",
+      "role": "final_test",
+      "metadata_file": "metadata/lidc_0006_series.json",
+      "metadata_sha256": "638549a3386a6e243cb5c9cb28b1cf67cf33bb422253206e09d23b63d9a092ee",
+      "expected_image_count": 133,
+      "reported_uncompressed_bytes": 70015630,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.132817748896065918417924920957",
+      "status": "metadata_verified_raw_not_audited"
+    },
+    {
+      "subject_id": "LIDC-IDRI-0007",
+      "study_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.280315210397549164238230581781",
+      "series_uid": "1.3.6.1.4.1.14519.5.2.1.6279.6001.272348349298439120568330857680",
+      "role": "final_test",
+      "metadata_file": "metadata/lidc_0007_series.json",
+      "metadata_sha256": "ab8069671a873d14748360f5273351ee43dfa4deb846053c2cc72867b3382a88",
+      "expected_image_count": 145,
+      "reported_uncompressed_bytes": 76335464,
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "collection_doi": "https://doi.org/10.7937/K9/TCIA.2015.LO9QL9SX",
+      "raw_download_url": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.6279.6001.272348349298439120568330857680",
+      "status": "metadata_verified_raw_not_audited"
+    }
+  ],
+  "manifest_sha256": "e303ca34174f99c85cbfb02cdfb2f7951ae7aa4ffc16aebba99dfd86d19530d6"
+}

@@ -44,3 +44,8 @@ python experiments/ordinary_tv_controls/run.py --case chest_start0_span120 --wei
 The queued batch uses the same call for both weights and both orientations,
 waiting for an idle GPU before each run. It stops at the first failure. No claims
 about independent-volume transfer follow from this chest-only tuning experiment.
+
+A fresh restart can use `--attempt chani_20261008` to create distinct job and
+reconstruction directories. It starts from the original initializer, with the
+same seed and full iteration budget. Earlier attempts remain in place; an attempt
+label cannot overwrite an existing run or resume a checkpoint.

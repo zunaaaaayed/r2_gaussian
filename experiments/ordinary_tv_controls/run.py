@@ -2,6 +2,7 @@
 import argparse
 import copy
 import json
+import re
 from pathlib import Path
 import sys
 
@@ -23,13 +24,16 @@ def baseline_manifest(path):
     return m
 
 
-def control_case(base, weight):
+def control_case(base, weight, attempt=None):
     require(base['population_role'] == base['acquisition_role'] == 'development', 'reserved case')
     require(base['case_id'] in ('chest_start0_span120', 'chest_start90_span120'), 'unsupported case')
     require(weight in ('0.025', '0.1'), 'unsupported TV control')
     case = copy.deepcopy(base)
     case['method']['lambda_tv'] = float(weight)
     case['run_id'] = base['case_id'] + '_ordinary_tv_' + weight.replace('.', 'p') + '_s0_i30000'
+    if attempt is not None:
+        require(re.fullmatch(r'[a-z0-9][a-z0-9_-]{0,63}', attempt) is not None, 'invalid attempt label')
+        case['run_id'] += '__' + attempt
     case['output_directory'] = 'output/ordinary_tv_controls/' + case['run_id']
     command = list(base['planned_commands']['train'])
     command[command.index('--model_path') + 1] = case['output_directory']
@@ -41,11 +45,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case', required=True)
     parser.add_argument('--weight', required=True, choices=('0.025', '0.1'))
+    parser.add_argument('--attempt', help='Fresh attempt label; preserves earlier outputs and starts from the original initializer')
     parser.add_argument('--execute', action='store_true')
     args = parser.parse_args()
     manifest = baseline_manifest(REPO / 'experiments/limited_angle_generalization/manifests/development_v4.json')
     base = next(c for c in manifest['cases'] if c['case_id'] == args.case)
-    case, command = control_case(base, args.weight)
+    case, command = control_case(base, args.weight, args.attempt)
     checks = verify_dataset(manifest, base)
     init = initializer_check(manifest, base)
     require(init == completed_stage(base, 'initialize', manifest)['artifacts'], 'initializer changed')
