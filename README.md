@@ -48,7 +48,10 @@ for results, evidence and remaining gates.
 
 ## Project guide
 
-- [Workstation handoff and exact continuation steps](experiments/ordinary_tv_controls/HANDOFF.md)
+Start with the [next-week handoff](NEXT_WEEK.md) for current priorities and
+[repository map](docs/REPOSITORY_MAP.md) for active versus historical material.
+
+- [Historical workstation-transfer snapshot](experiments/ordinary_tv_controls/HANDOFF.md)
 - [Generalization protocol and split rules](experiments/limited_angle_generalization/protocol.md)
 - [Benchmark preparation and verification](experiments/limited_angle_generalization/README.md)
 - [Guarded single-case workflow](experiments/limited_angle_generalization/workflow.md)
@@ -70,16 +73,15 @@ The verified university stack used Python 3.9.23, PyTorch 2.1.2+cu118, CUDA 11.8
 NumPy 1.24.4, Open3D 0.18, and an RTX 4000 Ada GPU. The local Conda environment is
 named `trdp2-r2`. Native extensions and TIGRE must be checked on a new computer;
 copied compiled binaries are not assumed portable. Follow the
-[handoff](experiments/ordinary_tv_controls/HANDOFF.md) before GPU execution.
+[current handoff](NEXT_WEEK.md) before GPU execution.
 The Python package remains named `r2_gaussian` to preserve the verified baseline.
 
 After activating the research environment:
 
 ```bash
-python -m unittest discover -s experiments/limited_angle_generalization/tests -v
-python -m unittest discover -s experiments/ordinary_tv_controls -p 'test_*.py' -v
-# Read-only paired-control preflight; transferred data is required:
-python experiments/ordinary_tv_controls/run.py --case chest_start0_span120 --weight 0.025
+python -B -m unittest discover -s experiments/limited_angle_generalization/tests -v
+python -B -m unittest discover -s experiments/ordinary_tv_controls -p 'test_*.py' -v
+python -B -m unittest discover -s experiments/independent_volume_evaluation -p 'test_*.py' -v
 ```
 
 Execution requires an explicit `--execute`. Existing destinations are rejected;
@@ -88,8 +90,9 @@ isolated from live PyTorch CUDA tensors because its context reset caused a
 segmentation fault in the original combined smoke process.
 
 Data, checkpoints, logs, and compiled extensions are excluded from Git. Transfer
-the separately checksummed artifact archive described in the handoff as well as
-this repository. Frozen source/data hashes must remain valid. Historical records
+the current data and artifacts as well as this repository. The historical
+7 October archive predates the completed TV controls and is not a current backup.
+Frozen source/data hashes must remain valid. Historical records
 retain their original repository name and workstation paths for provenance.
 
 Original installation options, data-generation instructions, and CLI reference

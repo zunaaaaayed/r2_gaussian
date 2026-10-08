@@ -19,3 +19,13 @@ logs/
 
 # Regenerable local code-navigation index and caches
 graphify-out/
+
+# Regenerable Python/tooling caches and editor leftovers
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+*~
+*.swp
+*.swo
